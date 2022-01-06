@@ -5,4 +5,9 @@
   text-decoration: none;
 }
 
+body {
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -17,8 +17,10 @@ img {
 
 body {
   direction: rtl;
+  height: 100vh;
   scroll-behavior: smooth;
   background: #fafafa;
+  position: relative;
 }
 
 html {
@@ -27,12 +29,40 @@ html {
 
 .header {
   padding: 1.5rem 9%;
+  background: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0;
-  background: #fff;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 576px) {
+  .header {
+    padding: 1.5rem 15% 1.5rem 4%;
+  }
+  .header__hamburger-icon {
+    display: block;
+  }
+  .header .menu {
+    display: none;
+  }
+}
+@media (min-width: 576px) {
+  .header__hamburger-icon {
+    display: block;
+  }
+  .header .menu {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .header__hamburger-icon {
+    display: none;
+  }
+  .header .menu {
+    display: block;
+  }
 }
 .header__header-right {
   display: flex;
@@ -40,8 +70,27 @@ html {
   align-items: center;
   gap: 3rem;
 }
+.header__hamburger-icon {
+  font-size: 2rem;
+  color: #733dd8;
+  position: absolute;
+  right: 4%;
+}
+.header__hamburger-icon.active {
+  display: none;
+}
+.header__close-icon {
+  font-size: 2.2rem;
+  color: #733dd8;
+  position: absolute;
+  right: 3%;
+  display: none;
+}
+.header__close-icon.active {
+  display: block;
+}
 .header .logo {
-  width: 3rem;
+  width: 2.8rem;
   cursor: pointer;
 }
 .header ul {
@@ -61,7 +110,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 4.5rem;
+  gap: 3rem;
 }
 .header__shopping-cart {
   position: relative;
@@ -72,8 +121,8 @@ html {
   cursor: pointer;
 }
 .header__shopping-cart .number {
-  width: 1.9rem;
-  height: 1.9rem;
+  width: 1.8rem;
+  height: 1.8rem;
   background: #f44336;
   color: #fff;
   border-radius: 50%;
@@ -92,15 +141,36 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.4rem;
+  gap: 1rem;
   color: #733dd8;
 }
 .header__login i {
-  font-size: 2rem;
+  font-size: 1.8rem;
   transform: rotate(180deg);
 }
 .header__login span {
   font-size: 1.4rem;
+}
+
+.navbar {
+  position: absolute;
+  top: 5rem;
+  width: 100%;
+  background: #fff;
+  display: none;
+}
+.navbar.active {
+  display: block;
+}
+.navbar li {
+  padding: 1rem 1.2rem;
+}
+.navbar a {
+  font-size: 1.4rem;
+  color: #000;
+}
+.navbar a:hover {
+  color: #733dd8;
 }
 
 /*# sourceMappingURL=style.css.map */

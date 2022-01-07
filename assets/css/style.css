@@ -75,6 +75,7 @@ html {
   color: #733dd8;
   position: absolute;
   right: 4%;
+  cursor: pointer;
 }
 .header__hamburger-icon.active {
   display: none;
@@ -85,6 +86,7 @@ html {
   position: absolute;
   right: 3%;
   display: none;
+  cursor: pointer;
 }
 .header__close-icon.active {
   display: block;
@@ -100,7 +102,7 @@ html {
   padding: 0.8rem 2rem;
   font-size: 1.4rem;
   border-radius: 0.6rem;
-  color: #733dd8;
+  color: #464e57;
 }
 .header a:hover {
   background: #733dd8;
@@ -157,6 +159,7 @@ html {
   top: 5rem;
   width: 100%;
   background: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08);
   display: none;
 }
 .navbar.active {
@@ -167,7 +170,7 @@ html {
 }
 .navbar a {
   font-size: 1.4rem;
-  color: #000;
+  color: #464e57;
 }
 .navbar a:hover {
   color: #733dd8;

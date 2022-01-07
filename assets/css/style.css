@@ -1,13 +1,106 @@
+@font-face {
+  font-family: "iran-yakan";
+  src: url("../fonts/ttf/iran-yekan-web-bold.ttf") format("truetype");
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  list-style: none;
+  font-family: "iran-yakan";
+}
+
+img {
+  width: 100%;
 }
 
 body {
   direction: rtl;
   scroll-behavior: smooth;
+  background: #fafafa;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.header {
+  padding: 1.5rem 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  background: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+.header__header-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+.header .logo {
+  width: 3rem;
+  cursor: pointer;
+}
+.header ul {
+  display: flex;
+}
+.header a {
+  padding: 0.8rem 2rem;
+  font-size: 1.4rem;
+  border-radius: 0.6rem;
+  color: #733dd8;
+}
+.header a:hover {
+  background: #733dd8;
+  color: #fff;
+}
+.header__header-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4.5rem;
+}
+.header__shopping-cart {
+  position: relative;
+}
+.header__shopping-cart i {
+  font-size: 1.8rem;
+  color: #733dd8;
+  cursor: pointer;
+}
+.header__shopping-cart .number {
+  width: 1.9rem;
+  height: 1.9rem;
+  background: #f44336;
+  color: #fff;
+  border-radius: 50%;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.header__login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.4rem;
+  color: #733dd8;
+}
+.header__login i {
+  font-size: 2rem;
+  transform: rotate(180deg);
+}
+.header__login span {
+  font-size: 1.4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -15,23 +15,26 @@ img {
   width: 100%;
 }
 
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
 body {
   direction: rtl;
   height: 100vh;
-  scroll-behavior: smooth;
   background: $bgColor;
   position: relative;
 }
 
-html {
-  font-size: 62.5%;
-}
-
 .header {
+  width: 100%;
   padding: 1.5rem 9%;
   background: $white;
   box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.1);
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   @include flex(flex, space-between, center);
   @include breakpoint(xs) {
     padding: 1.5rem 15% 1.5rem 4%;
@@ -155,11 +158,13 @@ html {
 }
 
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 5rem;
+  left: 0;
+  z-index: 1001;
   width: 100%;
   background: $white;
-  box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.08);
+  box-shadow: 0 2rem 2rem rgba($color: #000000, $alpha: 0.1);
   display: none;
 
   &.active {
@@ -182,6 +187,10 @@ html {
 
 .main-page {
   padding: 0 9%;
+
+  @include breakpoint(xs){
+    padding: 0 4%;
+  }
 }
 
 .btn {
@@ -201,19 +210,38 @@ html {
 .home {
   width: 100%;
   height: 60rem;
-  background: gray;
-  padding: 5rem 2rem;
-  @include flex(flex, center, center);
+  @include flex(flex, center, center, 4rem);
+  @include breakpoint(xs) {
+    flex-direction: column;
+    padding: 15rem 2rem 5rem;
+  }
+  @include breakpoint(sm) {
+    flex-direction: column;
+    padding: 10rem 2rem 5rem;
+  }
+  @include breakpoint(xxl) {
+    flex-direction: row;
+    padding: 5rem 2rem;
+  }
 
   &__image {
-    width: 60rem;
     height: 100%;
-    margin-right: 2rem;
+    position: relative;
+
+    @include breakpoint(xs) {
+      width: 90%;
+    }
+    @include breakpoint(sm) {
+      width: 90%;
+    }
+    @include breakpoint(md) {
+      width: 50%;
+    }
   }
 
   &__content {
     text-align: center;
-    margin-right: 4rem;
+    position: relative;
 
     h1 {
       font-size: 2.6rem;
@@ -227,12 +255,12 @@ html {
       color: $gray1;
     }
 
-    p{
+    p {
       font-size: 1.5rem;
       color: $gray2;
       margin-top: 5rem;
 
-      a{
+      a {
         color: $blue;
       }
     }

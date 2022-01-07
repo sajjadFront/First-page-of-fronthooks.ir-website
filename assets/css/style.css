@@ -176,4 +176,49 @@ html {
   color: #733dd8;
 }
 
+.main-page {
+  padding: 0 9%;
+}
+
+.btn {
+  padding: 1.4rem 2.8rem;
+  background: linear-gradient(333deg, #2b0179 0%, #2b0179 0%, #7938f2 100%, #7938f2 100%);
+  color: #fff;
+  font-size: 1.7rem;
+  border-radius: 1rem;
+}
+
+.home {
+  padding: 5rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.home__image {
+  width: 45%;
+  margin-right: 3.5rem;
+}
+.home__content {
+  text-align: center;
+  margin-right: 4rem;
+}
+.home__content h1 {
+  font-size: 2.6rem;
+  margin-bottom: 5rem;
+}
+.home__content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 5rem;
+  color: #464e57;
+}
+.home__content p {
+  font-size: 1.6rem;
+  color: #79797a;
+  margin-top: 5rem;
+}
+.home__content p a {
+  color: #7a70dc;
+}
+
 /*# sourceMappingURL=style.css.map */

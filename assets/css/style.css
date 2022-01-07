@@ -1,6 +1,26 @@
 @font-face {
-  font-family: "iran-yakan";
-  src: url("../fonts/ttf/iran-yekan-web-bold.ttf") format("truetype");
+  font-display: swap;
+  font-family: yekan;
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/fonts/yekan/eot/iran-yekan-web-bold.eot");
+  src: url("/assets/fonts/yekan/woff/iran-yekan-web-bold.woff") format("woff"), url("/assets/fonts/yekan/ttf/iran-yekan-web-bold.ttf") format("truetype");
+}
+@font-face {
+  font-display: swap;
+  font-family: yekan;
+  font-style: normal;
+  font-weight: 300;
+  src: url("/assets/fonts/yekan/eot/iran-yekan-web-light.eot");
+  src: url("/assets/fonts/yekan/woff/iran-yekan-web-light.woff") format("woff"), url("/assets/fonts/yekan/ttf/iran-yekan-web-light.ttf") format("truetype");
+}
+@font-face {
+  font-display: swap;
+  font-family: yekan;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/yekan/eot/iran-yekan-web-regular.eot");
+  src: url("/assets/fonts/yekan/woff/iran-yekan-web-regular.woff") format("woff"), url("/assets/fonts/yekan/ttf/iran-yekan-web-regular.ttf") format("truetype");
 }
 * {
   margin: 0;
@@ -8,7 +28,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: "iran-yakan";
+  font-family: yekan;
 }
 
 img {
@@ -123,8 +143,8 @@ html {
   cursor: pointer;
 }
 .header__shopping-cart .number {
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 1.9rem;
+  height: 1.9rem;
   background: #f44336;
   color: #fff;
   border-radius: 50%;
@@ -189,6 +209,9 @@ html {
 }
 
 .home {
+  width: 100%;
+  height: 60rem;
+  background: gray;
   padding: 5rem 2rem;
   display: flex;
   justify-content: center;
@@ -196,8 +219,9 @@ html {
   gap: 0;
 }
 .home__image {
-  width: 45%;
-  margin-right: 3.5rem;
+  width: 60rem;
+  height: 100%;
+  margin-right: 2rem;
 }
 .home__content {
   text-align: center;
@@ -205,6 +229,7 @@ html {
 }
 .home__content h1 {
   font-size: 2.6rem;
+  font-style: normal;
   margin-bottom: 5rem;
 }
 .home__content h2 {
@@ -213,12 +238,12 @@ html {
   color: #464e57;
 }
 .home__content p {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: #79797a;
   margin-top: 5rem;
 }
 .home__content p a {
-  color: #7a70dc;
+  color: #3966dd;
 }
 
 /*# sourceMappingURL=style.css.map */

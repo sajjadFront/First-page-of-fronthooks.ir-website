@@ -18,13 +18,13 @@ img {
 html {
   scroll-behavior: smooth;
 
-  @include breakpoint(xs){
-    font-size: 55%;
+  @include breakpoint(xs) {
+    font-size: 60%;
   }
-  @include breakpoint(sm){
-    font-size: 55%;
+  @include breakpoint(sm) {
+    font-size: 60%;
   }
-  @include breakpoint(md){
+  @include breakpoint(md) {
     font-size: 62.5%;
   }
 }
@@ -40,10 +40,10 @@ body {
   width: 100%;
   padding: 1.5rem 9%;
   background: $white;
-  box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.1);
+  box-shadow: $boxShadow;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 1;
   @include flex(flex, space-between, center);
   @include breakpoint(xs) {
     padding: 1.5rem 15% 1.5rem 4%;
@@ -77,7 +77,7 @@ body {
   }
 
   &__hamburger-icon {
-    font-size: 2rem;
+    font-size: 20px;
     color: $primaryColor;
     position: absolute;
     right: 4%;
@@ -89,7 +89,7 @@ body {
   }
 
   &__close-icon {
-    font-size: 2.2rem;
+    font-size: 22px;
     color: $primaryColor;
     position: absolute;
     right: 3%;
@@ -102,7 +102,7 @@ body {
   }
 
   .logo {
-    width: 2.8rem;
+    width: 28px;
     cursor: pointer;
   }
 
@@ -130,7 +130,7 @@ body {
     position: relative;
 
     i {
-      font-size: 1.8rem;
+      font-size: 18px;
       color: $primaryColor;
       cursor: pointer;
     }
@@ -156,7 +156,7 @@ body {
     color: $primaryColor;
 
     i {
-      font-size: 1.8rem;
+      font-size: 18px;
       transform: rotate(180deg);
     }
 
@@ -170,7 +170,7 @@ body {
   position: fixed;
   top: 5rem;
   left: 0;
-  z-index: 1001;
+  z-index: 2;
   width: 100%;
   background: $white;
   box-shadow: 0 2rem 2rem rgba($color: #000000, $alpha: 0.1);
@@ -185,7 +185,7 @@ body {
   }
 
   a {
-    font-size: 1.4rem;
+    font-size: 14px;
     color: $gray1;
 
     &:hover {
@@ -213,7 +213,7 @@ body {
   );
   color: $white;
   font-size: 1.7rem;
-  border-radius: 1rem;
+  border-radius: .8rem;
 }
 
 .home {
@@ -283,16 +283,16 @@ body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 3rem;
-  @include breakpoint(xs){
+  @include breakpoint(xs) {
     grid-template-columns: repeat(2, 1fr);
   }
-  @include breakpoint(sm){
+  @include breakpoint(sm) {
     grid-template-columns: repeat(2, 1fr);
   }
-  @include breakpoint(md){
+  @include breakpoint(md) {
     grid-template-columns: repeat(3, 1fr);
   }
-  @include breakpoint(lg){
+  @include breakpoint(lg) {
     grid-template-columns: repeat(5, 1fr);
   }
 
@@ -303,29 +303,147 @@ body {
     padding: 5rem 3.5rem;
     text-align: center;
     @include flex(flex, center, center);
-    @include breakpoint(xs){
+    @include breakpoint(xs) {
       padding: 3rem 2rem;
     }
-    
+
     &__img {
       width: 4rem;
       margin-bottom: 1.5rem;
     }
 
-    h3{
+    h3 {
       font-size: 1.4rem;
       margin-bottom: 1.5rem;
     }
 
-    p{
+    p {
       font-size: 1.2rem;
       color: $gray1;
     }
   }
 
-  .refund{
-    @include breakpoint(xs){
+  .refund {
+    @include breakpoint(xs) {
       grid-column: 1/3;
+    }
+  }
+}
+
+.courses {
+  margin-top: 6rem;
+
+  &__heading {
+    margin-bottom: 2.5rem;
+    @include flex(flex, center);
+
+    img {
+      width: 360px;
+    }
+  }
+
+  &__courses-box {
+    display: grid;
+    gap: 4rem;
+    @include breakpoint(xs){
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @include breakpoint(sm){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint(xxl){
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+.course{
+  background: $white;
+  border-radius: .8rem;
+  overflow: hidden;
+  box-shadow: $boxShadow;
+
+  &__img{
+    width: 100%;
+    @include breakpoint(xs){
+      height: 29rem;
+    }
+    @include breakpoint(xxl){
+      height: 25rem;
+    }
+
+    img{
+      height: 100%;
+      object-position: center;
+      object-fit: cover;
+    }
+  }
+
+  &__content{
+    padding: 1.5rem 1.5rem 2.5rem;
+
+    h3{
+      font-size: 1.8rem;
+      margin-bottom: 3rem;
+      cursor: pointer;
+      color: $gray1;
+
+      &:hover{
+        color: $blue;
+      }
+    }
+
+    &__time{
+      @include flex(flex, flex-start, center, 1rem);
+      margin-bottom: 1.5rem;
+
+      i{
+        font-size: 2.2rem;
+        color: $primaryColor;
+      }
+
+      h4{
+        font-size: 1.4rem;
+        color: $gray2;
+      }
+    }
+
+    &__view{
+      @include flex(flex, flex-start, center, 1rem);
+      font-size: 1.4rem;
+      color: $primaryColor;
+      margin-bottom: 4rem;
+      cursor: pointer;
+
+      i{
+        transition: .4s ease-in-out;
+
+        &:hover{
+          transform: translateX(-1.2rem);
+        }
+      }
+    }
+
+    &__register-price{
+      @include flex(flex, space-between, center);
+    }
+
+    .register{
+      font-size: 1.4rem;
+
+      a{
+        padding: 1rem 2.5rem;
+      }
+    }
+
+    .price{
+      font-size: 1.4rem;
+      font-weight: 600;
+      
+      &__number{
+        margin-left: .5rem;
+        color: $gray1;
+      }
     }
   }
 }

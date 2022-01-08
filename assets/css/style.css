@@ -40,12 +40,12 @@ html {
 }
 @media (max-width: 576px) {
   html {
-    font-size: 55%;
+    font-size: 60%;
   }
 }
 @media (min-width: 576px) {
   html {
-    font-size: 55%;
+    font-size: 60%;
   }
 }
 @media (min-width: 768px) {
@@ -68,7 +68,7 @@ body {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -108,7 +108,7 @@ body {
   gap: 3rem;
 }
 .header__hamburger-icon {
-  font-size: 2rem;
+  font-size: 20px;
   color: #733dd8;
   position: absolute;
   right: 4%;
@@ -118,7 +118,7 @@ body {
   display: none;
 }
 .header__close-icon {
-  font-size: 2.2rem;
+  font-size: 22px;
   color: #733dd8;
   position: absolute;
   right: 3%;
@@ -129,7 +129,7 @@ body {
   display: block;
 }
 .header .logo {
-  width: 2.8rem;
+  width: 28px;
   cursor: pointer;
 }
 .header ul {
@@ -155,7 +155,7 @@ body {
   position: relative;
 }
 .header__shopping-cart i {
-  font-size: 1.8rem;
+  font-size: 18px;
   color: #733dd8;
   cursor: pointer;
 }
@@ -184,7 +184,7 @@ body {
   color: #733dd8;
 }
 .header__login i {
-  font-size: 1.8rem;
+  font-size: 18px;
   transform: rotate(180deg);
 }
 .header__login span {
@@ -195,7 +195,7 @@ body {
   position: fixed;
   top: 5rem;
   left: 0;
-  z-index: 1001;
+  z-index: 2;
   width: 100%;
   background: #fff;
   box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.1);
@@ -208,7 +208,7 @@ body {
   padding: 1rem 1.2rem;
 }
 .navbar a {
-  font-size: 1.4rem;
+  font-size: 14px;
   color: #464e57;
 }
 .navbar a:hover {
@@ -229,7 +229,7 @@ body {
   background: linear-gradient(333deg, #2b0179 0%, #2b0179 0%, #7938f2 100%, #7938f2 100%);
   color: #fff;
   font-size: 1.7rem;
-  border-radius: 1rem;
+  border-radius: 0.8rem;
 }
 
 .home {
@@ -360,6 +360,127 @@ body {
   .services .refund {
     grid-column: 1/3;
   }
+}
+
+.courses {
+  margin-top: 6rem;
+}
+.courses__heading {
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.courses__heading img {
+  width: 360px;
+}
+.courses__courses-box {
+  display: grid;
+  gap: 4rem;
+}
+@media (max-width: 576px) {
+  .courses__courses-box {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 576px) {
+  .courses__courses-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1400px) {
+  .courses__courses-box {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.course {
+  background: #fff;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+.course__img {
+  width: 100%;
+}
+@media (max-width: 576px) {
+  .course__img {
+    height: 29rem;
+  }
+}
+@media (min-width: 1400px) {
+  .course__img {
+    height: 25rem;
+  }
+}
+.course__img img {
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+.course__content {
+  padding: 1.5rem 1.5rem 2.5rem;
+}
+.course__content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+  cursor: pointer;
+  color: #464e57;
+}
+.course__content h3:hover {
+  color: #3966dd;
+}
+.course__content__time {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.course__content__time i {
+  font-size: 2.2rem;
+  color: #733dd8;
+}
+.course__content__time h4 {
+  font-size: 1.4rem;
+  color: #79797a;
+}
+.course__content__view {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.4rem;
+  color: #733dd8;
+  margin-bottom: 4rem;
+  cursor: pointer;
+}
+.course__content__view i {
+  transition: 0.4s ease-in-out;
+}
+.course__content__view i:hover {
+  transform: translateX(-1.2rem);
+}
+.course__content__register-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+.course__content .register {
+  font-size: 1.4rem;
+}
+.course__content .register a {
+  padding: 1rem 2.5rem;
+}
+.course__content .price {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.course__content .price__number {
+  margin-left: 0.5rem;
+  color: #464e57;
 }
 
 /*# sourceMappingURL=style.css.map */

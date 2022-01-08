@@ -36,8 +36,22 @@ img {
 }
 
 html {
-  font-size: 62.5%;
   scroll-behavior: smooth;
+}
+@media (max-width: 576px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (min-width: 576px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
 }
 
 body {
@@ -229,19 +243,22 @@ body {
 @media (max-width: 576px) {
   .home {
     flex-direction: column;
-    padding: 15rem 2rem 5rem;
+    padding: 15rem 2rem 0;
+    margin-bottom: 15rem;
   }
 }
 @media (min-width: 576px) {
   .home {
     flex-direction: column;
-    padding: 10rem 2rem 5rem;
+    padding: 10rem 2rem 0;
+    margin-bottom: 15rem;
   }
 }
 @media (min-width: 1400px) {
   .home {
     flex-direction: row;
     padding: 5rem 2rem;
+    margin-bottom: 0;
   }
 }
 .home__image {
@@ -260,7 +277,7 @@ body {
 }
 @media (min-width: 768px) {
   .home__image {
-    width: 50%;
+    width: 48%;
   }
 }
 .home__content {
@@ -284,6 +301,65 @@ body {
 }
 .home__content p a {
   color: #3966dd;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3rem;
+}
+@media (max-width: 576px) {
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 576px) {
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .services {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .services {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+.services .service {
+  background: #fff;
+  border-radius: 1rem;
+  flex-direction: column;
+  padding: 5rem 3.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+@media (max-width: 576px) {
+  .services .service {
+    padding: 3rem 2rem;
+  }
+}
+.services .service__img {
+  width: 4rem;
+  margin-bottom: 1.5rem;
+}
+.services .service h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+.services .service p {
+  font-size: 1.2rem;
+  color: #464e57;
+}
+@media (max-width: 576px) {
+  .services .refund {
+    grid-column: 1/3;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -16,8 +16,17 @@ img {
 }
 
 html {
-  font-size: 62.5%;
   scroll-behavior: smooth;
+
+  @include breakpoint(xs){
+    font-size: 55%;
+  }
+  @include breakpoint(sm){
+    font-size: 55%;
+  }
+  @include breakpoint(md){
+    font-size: 62.5%;
+  }
 }
 
 body {
@@ -188,7 +197,7 @@ body {
 .main-page {
   padding: 0 9%;
 
-  @include breakpoint(xs){
+  @include breakpoint(xs) {
     padding: 0 4%;
   }
 }
@@ -213,15 +222,18 @@ body {
   @include flex(flex, center, center, 4rem);
   @include breakpoint(xs) {
     flex-direction: column;
-    padding: 15rem 2rem 5rem;
+    padding: 15rem 2rem 0;
+    margin-bottom: 15rem;
   }
   @include breakpoint(sm) {
     flex-direction: column;
-    padding: 10rem 2rem 5rem;
+    padding: 10rem 2rem 0;
+    margin-bottom: 15rem;
   }
   @include breakpoint(xxl) {
     flex-direction: row;
     padding: 5rem 2rem;
+    margin-bottom: 0;
   }
 
   &__image {
@@ -235,7 +247,7 @@ body {
       width: 90%;
     }
     @include breakpoint(md) {
-      width: 50%;
+      width: 48%;
     }
   }
 
@@ -263,6 +275,57 @@ body {
       a {
         color: $blue;
       }
+    }
+  }
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3rem;
+  @include breakpoint(xs){
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include breakpoint(sm){
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include breakpoint(md){
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include breakpoint(lg){
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .service {
+    background: $white;
+    border-radius: 1rem;
+    flex-direction: column;
+    padding: 5rem 3.5rem;
+    text-align: center;
+    @include flex(flex, center, center);
+    @include breakpoint(xs){
+      padding: 3rem 2rem;
+    }
+    
+    &__img {
+      width: 4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    h3{
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p{
+      font-size: 1.2rem;
+      color: $gray1;
+    }
+  }
+
+  .refund{
+    @include breakpoint(xs){
+      grid-column: 1/3;
     }
   }
 }

@@ -558,4 +558,41 @@ body {
   color: #0f51df;
 }
 
+.statistics {
+  margin-bottom: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+.statistics__content h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+.statistics__content p {
+  font-size: 1.4rem;
+}
+.statistics__statistics-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+.statistics__statistics-box .box {
+  background: #fff;
+  padding: 1rem 4.8rem;
+  text-align: center;
+  border-radius: 1.2rem;
+}
+.statistics__statistics-box .box h3 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.statistics__statistics-box .box p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #733dd8;
+}
+
 /*# sourceMappingURL=style.css.map */

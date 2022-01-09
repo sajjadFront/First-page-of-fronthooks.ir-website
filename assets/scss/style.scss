@@ -513,3 +513,46 @@ body {
     }
   }
 }
+
+.statistics{
+  margin-bottom: 10rem;
+  @include flex(flex, space-between, center);
+
+  &__content{
+
+    h2{
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+
+    p{
+      font-size: 1.4rem;
+    }
+  }
+
+  &__statistics-box{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+
+    .box{
+      background: $white;
+      padding: 1rem 4.8rem;
+      text-align: center;
+      border-radius: 1.2rem;
+
+      h3{
+        font-size: 2.4rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      p{
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: $primaryColor;
+      }
+    }
+  }
+}

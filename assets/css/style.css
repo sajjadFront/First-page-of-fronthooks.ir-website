@@ -22,6 +22,18 @@
   src: url("/assets/fonts/yekan/eot/iran-yekan-web-regular.eot");
   src: url("/assets/fonts/yekan/woff/iran-yekan-web-regular.woff") format("woff"), url("/assets/fonts/yekan/ttf/iran-yekan-web-regular.ttf") format("truetype");
 }
+@keyframes clickForNavbar {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+    background: rgba(0, 0, 0, 0.03);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+    background: rgba(0, 0, 0, 0.03);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -111,19 +123,33 @@ body {
   font-size: 20px;
   color: #733dd8;
   position: absolute;
-  right: 4%;
+  right: 0;
   cursor: pointer;
+  padding: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 1.1rem 1.6rem;
+}
+.header__hamburger-icon:hover {
+  background: rgba(0, 0, 0, 0.03);
 }
 .header__hamburger-icon.active {
   display: none;
 }
 .header__close-icon {
-  font-size: 22px;
+  font-size: 24px;
   color: #733dd8;
   position: absolute;
-  right: 3%;
+  right: -1%;
   display: none;
   cursor: pointer;
+  padding: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 1.1rem 1.6rem;
+}
+.header__close-icon:hover {
+  background: rgba(0, 0, 0, 0.03);
 }
 .header__close-icon.active {
   display: block;

@@ -1,6 +1,7 @@
 @import "mixins";
 @import "variables";
 @import "fonts";
+@import "animation";
 
 * {
   margin: 0;
@@ -80,8 +81,10 @@ body {
     font-size: 20px;
     color: $primaryColor;
     position: absolute;
-    right: 4%;
+    right: 0;
     cursor: pointer;
+    @include hoverState;
+    padding: 1.1rem 1.6rem;
 
     &.active {
       display: none;
@@ -89,12 +92,14 @@ body {
   }
 
   &__close-icon {
-    font-size: 22px;
+    font-size: 24px;
     color: $primaryColor;
     position: absolute;
-    right: 3%;
+    right: -1%;
     display: none;
     cursor: pointer;
+    @include hoverState;
+    padding: 1.1rem 1.6rem;
 
     &.active {
       display: block;

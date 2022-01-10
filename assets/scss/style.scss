@@ -450,7 +450,7 @@ body {
 }
 
 .describtion{
-  margin: 13rem 0 15rem;
+  margin: 13rem 0;
   height: 40rem;
   @include flex(flex, center, center, 4rem);
   @include breakpoint(xs){
@@ -515,8 +515,24 @@ body {
 }
 
 .statistics{
-  margin-bottom: 10rem;
-  @include flex(flex, space-between, center);
+  padding: 0 1rem;
+  
+  @include breakpoint(xs){
+    margin: 66rem 0 10rem;
+    flex-direction: column;
+    @include flex(flex, space-between, flex-start, 3rem);
+  }
+  @include breakpoint(sm){
+    margin: 35rem 0 10rem;
+    flex-direction: column;
+    @include flex(flex, space-between, flex-start, 3rem);
+  }
+  @include breakpoint(lg){
+    @include flex(flex, space-between, center, 2rem);
+    margin: 20rem 0 10rem;
+    flex-direction: row;
+  }
+  
 
   &__content{
 
@@ -533,19 +549,32 @@ body {
 
   &__statistics-box{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
+    @include breakpoint(xs){
+      width: 100%;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @include breakpoint(sm){
+      width: 100%;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @include breakpoint(lg){
+      width: auto;
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     .box{
       background: $white;
       padding: 1rem 4.8rem;
-      text-align: center;
       border-radius: 1.2rem;
+      @include flex(flex, space-between, center, 1rem);
+      @include breakpoint(lg){
+        flex-direction: column;
+      }
 
       h3{
         font-size: 2.4rem;
         font-weight: 600;
-        margin-bottom: 1rem;
       }
 
       p{

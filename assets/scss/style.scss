@@ -594,9 +594,17 @@ body {
   grid-template-columns: repeat(4, 1fr);
 
   &__programmer-info{
-    grid-column: 1/4;
     text-align: justify;
-    padding-left: 3rem;
+    @include breakpoint(xs){
+      grid-column: 1/5;
+    }
+    @include breakpoint(sm){
+      grid-column: 1/5;
+    }
+    @include breakpoint(lg){
+      grid-column: 1/4;
+      padding-left: 3rem;
+    }
 
     h2{
       font-size: 1.4rem;
@@ -606,8 +614,21 @@ body {
 
     p{
       font-size: 1.17rem;
-      line-height: 2.6;
-      color: $gray3;
+      color: $gray4;
+
+      @include breakpoint(xs){
+        line-height: 1.8;
+      }
+      @include breakpoint(sm){
+        line-height: 1.8;
+      }
+      @include breakpoint(md){
+        line-height: 2.6;
+      }
+    }
+
+    a{
+      color: $blue;
     }
   }
 
@@ -627,10 +648,21 @@ body {
 
   &__img{
     width: 7rem;
+
+    @include breakpoint(xs){
+      grid-column: 1/5;
+    }
+    @include breakpoint(sm){
+      grid-column: 1/5;
+    }
+    @include breakpoint(lg){
+      grid-column: 4/5;
+    }
   }
 
   &__copyrights{
     font-size: 1.4rem;
-    color: $gray1;
+    color: $gray4;
+    grid-column: 1/5;
   }
 }

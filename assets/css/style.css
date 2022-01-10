@@ -645,4 +645,48 @@ body {
   color: #733dd8;
 }
 
+.footer {
+  background: #f5f5f5;
+  padding: 3.5rem 7.8%;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+.footer__programmer-info {
+  grid-column: 1/4;
+  text-align: justify;
+  padding-left: 3rem;
+}
+.footer__programmer-info h2 {
+  font-size: 1.4rem;
+  color: #733dd8;
+  margin-bottom: 2rem;
+}
+.footer__programmer-info p {
+  font-size: 1.17rem;
+  line-height: 2.6;
+  color: #3b4147;
+}
+.footer__social-media {
+  margin-top: 3.2rem;
+  padding-right: 1.5rem;
+}
+.footer__social-media ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+.footer__social-media a {
+  font-size: 2.2rem;
+  color: #79797a;
+}
+.footer__img {
+  width: 7rem;
+}
+.footer__copyrights {
+  font-size: 1.4rem;
+  color: #464e57;
+}
+
 /*# sourceMappingURL=style.css.map */

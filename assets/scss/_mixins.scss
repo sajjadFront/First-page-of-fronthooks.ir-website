@@ -1,38 +1,49 @@
-// @include breakpoint(sm){ font-size: 20px; } 
+// @include breakpoint(sm){ font-size: 20px; }
 @mixin breakpoint($class) {
-    @if ($class == xs) {
-      @media (max-width: 576px) { @content; }
+  @if ($class == xs) {
+    @media (max-width: 576px) {
+      @content;
     }
-  
-    @else if ($class == sm) {
-      @media (min-width: 576px) { @content; }
+  } @else if ($class == sm) {
+    @media (min-width: 576px) {
+      @content;
     }
-  
-    @else if ($class == md) {
-      @media (min-width: 768px) { @content; }
+  } @else if ($class == md) {
+    @media (min-width: 768px) {
+      @content;
     }
-  
-    @else if ($class == lg) {
-      @media (min-width: 992px) { @content; }
+  } @else if ($class == lg) {
+    @media (min-width: 992px) {
+      @content;
     }
-  
-    @else if ($class == xl) {
-      @media (min-width: 1200px) { @content; }
+  } @else if ($class == xl) {
+    @media (min-width: 1200px) {
+      @content;
     }
-  
-    @else if ($class == xxl) {
-      @media (min-width: 1400px) { @content; }
+  } @else if ($class == xxl) {
+    @media (min-width: 1400px) {
+      @content;
     }
-  
-    @else {
-      @warn "breakpoint mixin supports: xs, sm, md, lg, xl, xxl";
-    }
+  } @else {
+    @warn "breakpoint mixin supports: xs, sm, md, lg, xl, xxl";
   }
-  
-  // @include flex($fdir: row,$jcnt: center,$aitem:center, $gap:0);
-  @mixin flex($dsp: flex, $jcnt: center, $aitem: center, $gap: 0) {
-    display: $dsp;
-    justify-content: $jcnt;
-    align-items: $aitem;
-    gap: $gap;
+}
+
+// hover state
+@mixin hoverState {
+  padding: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover{
+    background: rgba(0, 0, 0, 0.03);
   }
+}
+
+// @include flex($fdir: row,$jcnt: center,$aitem:center, $gap:0);
+@mixin flex($dsp: flex, $jcnt: center, $aitem: center, $gap: 0) {
+  display: $dsp;
+  justify-content: $jcnt;
+  align-items: $aitem;
+  gap: $gap;
+}

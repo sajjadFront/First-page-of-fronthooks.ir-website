@@ -623,8 +623,12 @@ body {
       padding: 1rem 4.8rem;
       border-radius: 1.2rem;
       @include flex(flex, space-between, center, 1rem);
+      @include breakpoint(xs){
+        padding: 1rem 2rem;
+      }
       @include breakpoint(lg){
         flex-direction: column;
+        padding: 1rem 4.8rem;
       }
 
       h3{

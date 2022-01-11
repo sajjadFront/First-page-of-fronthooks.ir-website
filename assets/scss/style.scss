@@ -152,7 +152,7 @@ body {
     .number {
       width: 1.9rem;
       height: 1.9rem;
-      background: #f44336;
+      background: $red;
       color: $white;
       border-radius: 50%;
       font-family: sans-serif;
@@ -239,7 +239,7 @@ body {
   @include breakpoint(xs) {
     flex-direction: column;
     padding: 6rem 2rem 0;
-    margin-bottom: 8rem;
+    margin-bottom: 0;
   }
   @include breakpoint(sm) {
     flex-direction: column;
@@ -503,6 +503,20 @@ body {
       &__number{
         margin-left: .5rem;
         color: $gray1;
+      }
+
+      .discount{
+        text-decoration: line-through;
+        color: $gray2;
+        display: inline-block;
+        margin-bottom: .5rem;
+      }
+
+      .percent{
+        background: $pink;
+        color: $white;
+        border-radius: 2rem;
+        padding: 0.3rem .8rem;
       }
     }
   }

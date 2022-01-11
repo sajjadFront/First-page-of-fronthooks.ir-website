@@ -29,7 +29,6 @@
   }
 }
 
-
 // @include flex($fdir: row,$jcnt: center,$aitem:center, $gap:0);
 @mixin flex($dsp: flex, $jcnt: center, $aitem: center, $gap: 0) {
   display: $dsp;
@@ -54,7 +53,7 @@
     & span{
       width: 100%;
       height: 100%;
-      background: rgba($color: #000000, $alpha: .1);
+      background: rgba($color: #000000, $alpha: .08);
       position: absolute;
       top: 0;
       right: 0;

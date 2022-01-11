@@ -426,6 +426,7 @@ body {
   .home__content p {
     font-size: 1.3rem;
     margin-top: 4rem;
+    line-height: 2;
   }
 }
 @media (min-width: 576px) {

@@ -326,6 +326,7 @@ body {
       @include breakpoint(xs) {
         font-size: 1.3rem;
         margin-top: 4rem;
+        line-height: 2;
       }
       @include breakpoint(sm) {
         font-size: 1.6rem;

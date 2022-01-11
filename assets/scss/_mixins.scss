@@ -29,16 +29,6 @@
   }
 }
 
-// hover state
-@mixin hoverState {
-  padding: 1.5rem;
-  border-radius: 50%;
-  cursor: pointer;
-
-  &:hover{
-    background: rgba(0, 0, 0, 0.03);
-  }
-}
 
 // @include flex($fdir: row,$jcnt: center,$aitem:center, $gap:0);
 @mixin flex($dsp: flex, $jcnt: center, $aitem: center, $gap: 0) {
@@ -47,3 +37,32 @@
   align-items: $aitem;
   gap: $gap;
 }
+
+  // hover state
+  @mixin hoverState {
+    padding: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3;
+  
+    &:hover{
+      background: rgba($color: #000000, $alpha: .03);
+    }
+  }
+
+  @mixin animateSpan {
+    & span{
+      width: 100%;
+      height: 100%;
+      background: rgba($color: #000000, $alpha: .1);
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-radius: 50%;
+      opacity: 0;
+    }
+    
+    & span.active{
+      animation: clickForNavbar .5s ease-out;
+    }
+  }

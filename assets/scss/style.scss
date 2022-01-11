@@ -78,25 +78,32 @@ body {
   }
 
   &__hamburger-icon {
-    font-size: 20px;
+    width: 5rem;
+    font-size: 21px;
     color: $primaryColor;
     position: absolute;
-    right: 4%;
+    right: 0.5%;
     cursor: pointer;
+    @include hoverState;
+    padding: 1.15rem 1.5rem .7rem;
+    @include animateSpan;
     
     &.active {
-      animation: clickForNavbar 0.3s linear;
       display: none;
+
     }
   }
 
   &__close-icon {
-    font-size: 24px;
+    font-size: 21px;
     color: $primaryColor;
     position: absolute;
-    right: 3%;
+    right: 0.5%;
     display: none;
     cursor: pointer;
+    @include hoverState;
+    padding: 1.15rem 1.5rem .7rem;
+    @include animateSpan;
 
     &.active {
       display: block;
@@ -173,7 +180,7 @@ body {
 
 .navbar {
   position: fixed;
-  top: 5rem;
+  top: 6rem;
   left: 0;
   z-index: 2;
   width: 100%;
@@ -186,7 +193,7 @@ body {
   }
 
   li {
-    padding: 1rem 1.2rem;
+    padding: 1rem 1.5rem;
   }
 
   a {
@@ -228,11 +235,11 @@ body {
   @include breakpoint(xs) {
     flex-direction: column;
     padding: 6rem 2rem 0;
-    margin-bottom: 10rem;
+    margin-bottom: 8rem;
   }
   @include breakpoint(sm) {
     flex-direction: column;
-    padding: 10rem 2rem 0;
+    padding: 5rem 2rem 0;
     margin-bottom: 30rem;
   }
   @include breakpoint(xl) {
@@ -285,7 +292,7 @@ body {
       }
       @include breakpoint(lg) {
         font-size: 2.6rem;
-        margin: 2rem 0 4.5rem;
+        margin: 6rem 0 4.5rem;
       }
     }
 
@@ -311,13 +318,14 @@ body {
 
     p {
       color: $gray2;
-      margin-top: 5rem;
 
       @include breakpoint(xs) {
         font-size: 1.3rem;
+        margin-top: 4rem;
       }
       @include breakpoint(sm) {
         font-size: 1.6rem;
+        margin-top: 5rem;
       }
 
       a {

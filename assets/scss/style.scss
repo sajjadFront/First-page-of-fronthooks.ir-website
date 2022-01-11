@@ -239,7 +239,7 @@ body {
   @include breakpoint(xs) {
     flex-direction: column;
     padding: 6rem 2rem 0;
-    margin-bottom: 0;
+    margin-bottom: 5rem;
   }
   @include breakpoint(sm) {
     flex-direction: column;

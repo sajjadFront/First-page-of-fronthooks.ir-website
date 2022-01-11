@@ -319,7 +319,7 @@ body {
   .home {
     flex-direction: column;
     padding: 6rem 2rem 0;
-    margin-bottom: 0;
+    margin-bottom: 5rem;
   }
 }
 @media (min-width: 576px) {

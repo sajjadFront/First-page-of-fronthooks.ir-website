@@ -1,12 +1,17 @@
 @keyframes clickForNavbar {
-    0%{
-        opacity: 0;
-        transform: scale(0);
-        background: rgba(0, 0, 0, 0.03);
-    }
-    100%{
-        opacity: 0.5;
-        transform: scale(1);
-        background: rgba(0, 0, 0, 0.03);
-    }
+  0% {
+    opacity: 0;
+    transform: scale(0);
+    background: rgba(0, 0, 0, 0.03);
+    padding: 1.5rem;
+    border-radius: 50%;
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+    background: black;
+    // background: rgba(0, 0, 0, 0.03);
+    padding: 1.5rem;
+    border-radius: 50%;
+  }
 }

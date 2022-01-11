@@ -81,12 +81,11 @@ body {
     font-size: 20px;
     color: $primaryColor;
     position: absolute;
-    right: 0;
+    right: 4%;
     cursor: pointer;
-    @include hoverState;
-    padding: 1.1rem 1.6rem;
-
+    
     &.active {
+      animation: clickForNavbar 0.3s linear;
       display: none;
     }
   }
@@ -95,11 +94,9 @@ body {
     font-size: 24px;
     color: $primaryColor;
     position: absolute;
-    right: -1%;
+    right: 3%;
     display: none;
     cursor: pointer;
-    @include hoverState;
-    padding: 1.1rem 1.6rem;
 
     &.active {
       display: block;
@@ -227,35 +224,47 @@ body {
 .home {
   width: 100%;
   height: 60rem;
-  @include flex(flex, center, center, 4rem);
+  @include flex(flex, space-between, center, 4rem);
   @include breakpoint(xs) {
     flex-direction: column;
-    padding: 15rem 2rem 0;
-    margin-bottom: 15rem;
+    padding: 6rem 2rem 0;
+    margin-bottom: 10rem;
   }
   @include breakpoint(sm) {
     flex-direction: column;
     padding: 10rem 2rem 0;
-    margin-bottom: 15rem;
+    margin-bottom: 30rem;
+  }
+  @include breakpoint(xl) {
+    margin-bottom: 10rem;
   }
   @include breakpoint(xxl) {
     flex-direction: row;
-    padding: 5rem 2rem;
+    padding: 0 2rem 5rem;
     margin-bottom: 0;
   }
 
   &__image {
     height: 100%;
     position: relative;
+    @include flex;
 
     @include breakpoint(xs) {
-      width: 90%;
+      width: 80%;
     }
     @include breakpoint(sm) {
-      width: 90%;
+      width: 80%;
     }
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
+      width: 60%;
+    }
+    @include breakpoint(xl) {
       width: 48%;
+      overflow: hidden;
+    }
+
+    img{
+      width: 140%;
     }
   }
 
@@ -264,21 +273,52 @@ body {
     position: relative;
 
     h1 {
-      font-size: 2.6rem;
       font-style: normal;
-      margin-bottom: 5rem;
+
+      @include breakpoint(xs) {
+        font-size: 1.7rem;
+        margin: 2rem 0;
+      }
+      @include breakpoint(sm) {
+        font-size: 2.2rem;
+        margin: 2rem 0 3.5rem;
+      }
+      @include breakpoint(lg) {
+        font-size: 2.6rem;
+        margin: 2rem 0 4.5rem;
+      }
     }
 
     h2 {
-      font-size: 1.8rem;
-      margin-bottom: 5rem;
       color: $gray1;
+      font-weight: 500;
+
+      @include breakpoint(xs) {
+        font-size: 1.5rem;
+        margin-bottom: 4rem;
+      }
+      @include breakpoint(sm) {
+        font-size: 1.8rem;
+        margin-bottom: 5rem;
+      }
+    }
+
+    .btn{
+      @include breakpoint(xs){
+        padding: 1.1rem 2.2rem;
+      }
     }
 
     p {
-      font-size: 1.5rem;
       color: $gray2;
       margin-top: 5rem;
+
+      @include breakpoint(xs) {
+        font-size: 1.3rem;
+      }
+      @include breakpoint(sm) {
+        font-size: 1.6rem;
+      }
 
       a {
         color: $blue;
@@ -308,7 +348,7 @@ body {
     background: $white;
     border-radius: 1rem;
     flex-direction: column;
-    padding: 5rem 3.5rem;
+    padding: 4.5rem 3.5rem;
     text-align: center;
     @include flex(flex, center, center);
     @include breakpoint(xs) {

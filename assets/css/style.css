@@ -249,6 +249,7 @@ body {
   align-items: center;
   gap: 0.2rem;
   color: #733dd8;
+  cursor: pointer;
 }
 .header__login i {
   font-size: 18px;
